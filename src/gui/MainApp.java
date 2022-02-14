@@ -16,10 +16,14 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("views/LoginView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("views/StudentView.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Attendance System");
         primaryStage.show();
+    }
+
+    public static void setStudentScene(Stage stage) throws IOException {
+
     }
 }
