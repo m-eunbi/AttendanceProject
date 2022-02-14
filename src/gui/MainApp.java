@@ -1,3 +1,5 @@
+package gui;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,7 +16,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("LoginStudentOnline.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("gui/views/LoginStudentOnline.fxml"));
 
         Scene scene = new Scene(root);
 
