@@ -4,8 +4,6 @@
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -26,105 +24,28 @@
                   <PieChart fx:id="pieChart" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </HBox>
-            <VBox alignment="TOP_CENTER" fillWidth="false">
+            <VBox fx:id="lessonVBox" alignment="TOP_CENTER" fillWidth="false">
                <children>
-                  <HBox alignment="CENTER" spacing="10.0">
+                  <HBox>
                      <children>
-                        <HBox alignment="TOP_CENTER" style="-fx-border-color: black;">
-                           <children>
-                              <Label prefWidth="150.0" text="14-02-2022" />
-                              <Label prefWidth="100.0" text="SCO2">
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                              </Label>
-                              <Label text="✅" />
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                        </HBox>
-                        <Label text="✏" />
+                        <Label prefWidth="150.0" text="Date">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label prefWidth="90.0" text="Course">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label prefWidth="60.0" text="Present">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" spacing="10.0">
-                     <children>
-                        <HBox alignment="TOP_CENTER" style="-fx-border-color: black;">
-                           <children>
-                              <Label prefWidth="150.0" text="14-02-2022" />
-                              <Label prefWidth="100.0" text="SDE2">
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                              </Label>
-                              <Label text="✅" />
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                        </HBox>
-                        <Label text="✏" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" spacing="10.0">
-                     <children>
-                        <HBox alignment="TOP_CENTER" style="-fx-border-color: black;">
-                           <children>
-                              <Label prefWidth="150.0" text="10-02-2022" />
-                              <Label prefWidth="100.0" text="ITO2">
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                              </Label>
-                              <Label text="✅" />
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                        </HBox>
-                        <Label text="✏" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" spacing="10.0">
-                     <children>
-                        <HBox alignment="TOP_CENTER" style="-fx-border-color: black;">
-                           <children>
-                              <Label prefWidth="150.0" text="07-02-2022" />
-                              <Label prefWidth="100.0" text="SCO2">
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                              </Label>
-                              <Label text="❌" />
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                        </HBox>
-                        <Label text="✏" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" spacing="10.0">
-                     <children>
-                        <HBox alignment="TOP_CENTER" style="-fx-border-color: black;">
-                           <children>
-                              <Label prefWidth="150.0" text="07-02-2022" />
-                              <Label prefWidth="100.0" text="SDE2">
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                              </Label>
-                              <Label text="❌" />
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                        </HBox>
-                        <Label text="✏" />
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
+               </children></VBox>
          </children>
          <BorderPane.margin>
             <Insets bottom="50.0" left="20.0" right="20.0" />
@@ -135,17 +56,7 @@
       <AnchorPane BorderPane.alignment="TOP_RIGHT">
          <children>
             <Button mnemonicParsing="false" onAction="#logout" text="Log out" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <VBox AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
-               <children>
-                  <ImageView fitHeight="40.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../OneDrive/Billeder/Shisa.jpg" />
-                     </image>
-                  </ImageView>
-                  <Label text="Tim Hansen" />
-                  <Label text="ID: TiHa4592" />
-               </children>
-            </VBox>
+            <VBox fx:id="infoVBox" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
          </children>
       </AnchorPane>
    </top>
