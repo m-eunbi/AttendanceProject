@@ -7,9 +7,9 @@ import java.net.URL;
 public class Student {
     public String name;
     public String iD;
-    public URL imagePath;
+    public String imagePath;
 
-    public Student(String name, String iD, URL imagePath){
+    public Student(String name, String iD, String imagePath){
         this.name = name;
         this.iD = iD;
         this.imagePath = imagePath;

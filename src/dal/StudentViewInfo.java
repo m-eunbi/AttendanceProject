@@ -2,9 +2,6 @@ package dal;
 
 import dal.BE.Lesson;
 import dal.BE.Student;
-import gui.MainApp;
-import javafx.scene.image.Image;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -14,7 +11,7 @@ public class StudentViewInfo {
 
     public StudentViewInfo(){
         lessons = new ArrayList<>();
-        student = new Student("Tim Hansen", "TiHa7642", MainApp.class.getResource("images/img6.jpg"));
+        student = new Student("Tim Hansen", "TiHa7642", "images/img6.jpg");
         fillLessons(lessons);
     }
 

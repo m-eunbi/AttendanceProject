@@ -55,7 +55,7 @@ public class StudentController implements Initializable {
 
     private void setStudentInfo(){
         Student student = infoGetter.studentViewInfo();
-        ImageView image = new ImageView(String.valueOf(student.imagePath));
+        ImageView image = new ImageView(student.imagePath);
         image.setFitHeight(50);
         image.setFitWidth(50);
         Label name = new Label(student.name);
