@@ -5,22 +5,26 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefWidth="400.0" stylesheets="@../Login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.TeacherController">
+<BorderPane prefWidth="600.0" stylesheets="@../Login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.TeacherController">
    <center>
-      <VBox alignment="TOP_CENTER" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" maxWidth="600.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
          <children>
-            <ComboBox promptText="Select Course">
+            <ComboBox fx:id="comboBox" onAction="#fillLessons" promptText="Select Course">
                <items>
                   <FXCollections fx:factory="observableArrayList">
-                     <String fx:value="SCO2" />
-                     <String fx:value="SDE2" />
+                     <String fx:value="SCO" />
+                     <String fx:value="SDE" />
                   </FXCollections>
                </items>
             </ComboBox>
-            <VBox prefHeight="100.0" style="-fx-border-color: black;" />
+            <VBox fx:id="lessonsVbox" prefHeight="100.0" style="-fx-border-color: black;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="600.0" text="Select course to see lessons" />
+               </children></VBox>
             <Button mnemonicParsing="false" prefHeight="40.0" text="Student Overview" />
          </children>
          <padding>
