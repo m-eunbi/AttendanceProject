@@ -1,5 +1,31 @@
-Label
-{
-    -fx-text-fill: black;
+Label {
+    -fx-font-family: fantasy;
+    -fx-font-size: 14;
 }
+
+BorderPane {
+    -fx-border-color: black;
+    -fx-background-image: url('https://i.imgur.com/yEFURzF.jpg');
+    -fx-background-position: CENTER CENTER;
+}
+
+Button {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-font-family: fantasy;
+    -fx-font-size: 14;
+}
+
+ComboBox {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-radius: 3;
+    -fx-font-family: fantasy;
+    -fx-font-size: 12;
+}
+
+
+
 

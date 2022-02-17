@@ -5,11 +5,11 @@ import dal.BE.Student;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class StudentsInfo {
+public class TeacherViewInfo {
     public ArrayList<Student> scoStudents;
     public ArrayList<Student> sdeStudents;
 
-    public StudentsInfo() {
+    public TeacherViewInfo() {
         scoStudents = new ArrayList<>();
         sdeStudents = new ArrayList<>();
         createStudents();

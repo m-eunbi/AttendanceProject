@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefWidth="450.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.StudentController">
+<BorderPane prefWidth="600.0" stylesheets="@../Login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.StudentController">
    <center>
       <VBox spacing="10.0" BorderPane.alignment="CENTER">
          <children>
@@ -24,7 +24,7 @@
                   <PieChart fx:id="pieChart" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </HBox>
-            <VBox fx:id="lessonVBox" alignment="TOP_CENTER" fillWidth="false">
+            <VBox fx:id="lessonVBox" alignment="TOP_CENTER" fillWidth="false" styleClass="background">
                <children>
                   <HBox>
                      <children>

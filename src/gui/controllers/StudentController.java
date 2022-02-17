@@ -80,7 +80,7 @@ public class StudentController implements Initializable {
             else
                 present = "❌";
             HBox innerHBox = new HBox();
-            innerHBox.setStyle("-fx-border-color: black");
+            innerHBox.setStyle("-fx-border-color: black; -fx-alignment: CENTER; -fx-background-color: white");
             innerHBox.setPadding(new Insets(0, 10, 0,10));
             HBox outerHBox = new HBox();
             Label date = new Label(l.date);
@@ -89,7 +89,7 @@ public class StudentController implements Initializable {
             lesson.setMinWidth(100);
             Label presence = new Label(present);
             presence.setMinWidth(10);
-            Button btn = new Button("X");
+            Button btn = new Button("Edit");
             btn.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {

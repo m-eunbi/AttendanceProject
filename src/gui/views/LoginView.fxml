@@ -5,33 +5,38 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.LoginController">
-   <children>
-      <Label text="ID">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtID" maxWidth="200.0" minWidth="200.0" />
-      <Label text="Password" textAlignment="CENTER">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-         <VBox.margin>
-            <Insets top="20.0" />
-         </VBox.margin>
-      </Label>
-      <PasswordField fx:id="txtPassword" maxWidth="200.0" minWidth="200.0" />
-      <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#handleLogin" text="Login">
-         <VBox.margin>
-            <Insets top="30.0" />
-         </VBox.margin>
-      </Button>
-   </children>
-   <padding>
-      <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
-   </padding>
-</VBox>
+<BorderPane stylesheets="@../Login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.LoginController">
+   <center>
+      <VBox alignment="CENTER">
+         <children>
+            <Label text="ID">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtID" maxWidth="200.0" minWidth="200.0" />
+            <Label text="Password" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <PasswordField fx:id="txtPassword" maxWidth="200.0" minWidth="200.0" />
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#handleLogin" text="Login">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

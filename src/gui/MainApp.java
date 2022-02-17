@@ -16,7 +16,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("views/StudentView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("views/TeacherStartView.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Attendance System");
