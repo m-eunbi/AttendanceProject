@@ -5,6 +5,7 @@ import dal.BE.Lesson;
 import gui.MainApp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -38,9 +39,13 @@ public class TeacherController {
 
     public void fillLessons() {
         lessonsVbox.getChildren().clear();
+        lessonsVbox.setStyle("-fx-border-color: transparent");
         ArrayList<Lesson> lessons = infoGetter.courseLessons((String) comboBox.getValue());
         for (Lesson l : lessons) {
             HBox hBox = new HBox();
+            hBox.setMinHeight(25);
+            hBox.setPadding(new Insets(0, 10, 0,10));
+            hBox.setStyle("-fx-border-color: black; -fx-background-color: white; -fx-alignment: CENTER;");
             Label date = new Label(l.date);
             date.setMinWidth(150);
             Label time = new Label(l.time);
