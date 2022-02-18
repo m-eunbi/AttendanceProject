@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefWidth="600.0" stylesheets="@../Login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.LessonViewController">
+<BorderPane prefWidth="600.0" stylesheets="@../MainStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.LessonViewController">
    <top>
       <MenuButton mnemonicParsing="false" text="🍔" BorderPane.alignment="TOP_RIGHT">
         <items>

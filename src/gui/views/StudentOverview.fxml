@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" prefWidth="600.0" stylesheets="@../MainStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.OverviewController">
+   <top>
+      <MenuButton mnemonicParsing="false" text="🍔" BorderPane.alignment="TOP_RIGHT">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#showCourses" text="Course Overview" />
+          <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout" />
+        </items>
+      </MenuButton>
+   </top>
+   <center>
+      <VBox spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="comboBox" onAction="#selectOrder" prefHeight="27.0" prefWidth="120.0" promptText="Sort by...">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Alphabetical" />
+                        <String fx:value="Most absence" />
+                    </FXCollections>
+                </items>
+             </ComboBox>
+            <TilePane fx:id="tilePane" hgap="20.0" prefHeight="200.0" prefWidth="200.0" vgap="20.0" />
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+   </center>
+   <padding>
+      <Insets bottom="50.0" />
+   </padding>
+</BorderPane>

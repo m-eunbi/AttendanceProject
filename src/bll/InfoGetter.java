@@ -1,5 +1,6 @@
 package bll;
 
+import dal.BE.Course;
 import dal.BE.Lesson;
 import dal.BE.Student;
 import dal.StudentViewInfo;
@@ -19,11 +20,28 @@ public class InfoGetter {
         return studentViewInfo.student;
     }
 
-    public ArrayList<Lesson> courseLessons(String course) {
+    public ArrayList<Lesson> getCourseLessons(String course) {
         if (course.equals("SCO"))
             return teacherViewInfo.scoLessons;
         else if (course.equals("SDE"))
             return teacherViewInfo.sdeLessons;
-        return new ArrayList<Lesson>();
+        return new ArrayList<>();
     }
+
+    public ArrayList<Student> getCourseStudents(String course) {
+        if (course.equals("SCO"))
+            return teacherViewInfo.scoStudents;
+        else if (course.equals("SDE"))
+            return teacherViewInfo.sdeStudents;
+        return new ArrayList<>();
+    }
+
+    public Course getCourse(String course){
+        if (course.equals("SCO"))
+            return teacherViewInfo.sco;
+        else if (course.equals("SDE"))
+            return teacherViewInfo.sde;
+        return null;
+    }
+
 }

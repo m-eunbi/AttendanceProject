@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefWidth="600.0" stylesheets="@../Login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.TeacherController">
+<BorderPane prefWidth="600.0" stylesheets="@../MainStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.TeacherController">
    <center>
       <VBox alignment="TOP_CENTER" maxWidth="500.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
          <children>
@@ -36,7 +36,7 @@
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="600.0" text="Select course to see lessons" />
                </children></VBox>
-            <Button mnemonicParsing="false" prefHeight="40.0" text="Student Overview">
+            <Button onAction="#studentOverview" mnemonicParsing="false" prefHeight="40.0" text="Student Overview">
                <VBox.margin>
                   <Insets top="50.0" />
                </VBox.margin></Button>
