@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
@@ -7,32 +8,37 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<BorderPane stylesheets="@../Login.css" prefHeight="473.0" prefWidth="397.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.TeacherController">
+<BorderPane prefWidth="600.0" stylesheets="@../Login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.LessonViewController">
    <top>
       <MenuButton mnemonicParsing="false" text="🍔" BorderPane.alignment="TOP_RIGHT">
         <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
+          <MenuItem onAction="#showCourses" mnemonicParsing="false" text="Course overview" />
+          <MenuItem onAction="#logout" mnemonicParsing="false" text="Log Out" />
         </items>
       </MenuButton>
    </top>
    <center>
-      <VBox fx:id="vBox" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox fx:id="vBox" maxWidth="500.0" prefWidth="498.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="TOP_CENTER" spacing="10.0">
+            <HBox alignment="TOP_CENTER" spacing="50.0">
                <children>
                   <Label fx:id="lblDate" text="Date" />
-                  <Label fx:id="lblCourse" text="course" />
+                  <Label fx:id="lblCourse" text="Course" />
                </children>
             </HBox>
             <HBox alignment="TOP_CENTER">
                <children>
-                  <Label prefWidth="300.0" text="Student" />
+                  <Label prefWidth="350.0" text="Student" />
                   <Label text="Presence" />
                </children>
             </HBox>
          </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
       </VBox>
    </center>
+   <padding>
+      <Insets bottom="50.0" />
+   </padding>
 </BorderPane>

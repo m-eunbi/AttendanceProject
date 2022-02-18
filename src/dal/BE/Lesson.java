@@ -8,10 +8,13 @@ public class Lesson {
     public String time;
     public String presenceOverview;
     public boolean present;
+    public ArrayList<Student> allStudents;
     public ArrayList<Student> presentStudents;
 
     public Lesson(String course, String date){
         this.course = course;
         this.date = date;
+        presentStudents = new ArrayList<>();
+        allStudents = new ArrayList<>();
     }
 }
