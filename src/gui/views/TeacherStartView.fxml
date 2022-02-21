@@ -25,10 +25,13 @@
                   <Insets bottom="50.0" />
                </VBox.margin>
             </ComboBox>
-            <HBox styleClass="boldText" alignment="TOP_CENTER" prefWidth="200.0">
+            <HBox alignment="TOP_CENTER" prefWidth="200.0" styleClass="boldText">
                <children>
-                  <Label prefWidth="150.0" text="Date" />
-                  <Label prefWidth="150.0" text="Time" />
+                  <Label prefWidth="100.0" text="Date" />
+                  <Label prefWidth="170.0" text="Time">
+                     <padding>
+                        <Insets left="60.0" />
+                     </padding></Label>
                   <Label text="Attendance" />
                </children>
             </HBox>

@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <BorderPane prefWidth="600.0" stylesheets="@../MainStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.StudentController">
    <center>
@@ -16,7 +15,7 @@
          <children>
             <HBox alignment="CENTER" spacing="20.0">
                <children>
-                  <Label styleClass="boldText" text="Total Absence: 6%" />
+                  <Label styleClass="boldText" text="Total Absence: 23%" />
                   <PieChart fx:id="pieChart" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </HBox>
@@ -25,8 +24,8 @@
                   <HBox styleClass="boldText">
                      <children>
                         <Label prefWidth="150.0" text="Date" />
-                        <Label prefWidth="90.0" text="Course"/>
-                        <Label prefWidth="60.0" text="Present"/>
+                        <Label prefWidth="100.0" text="Course" />
+                        <Label text="Attendance" />
                      </children>
                   </HBox>
                </children></VBox>

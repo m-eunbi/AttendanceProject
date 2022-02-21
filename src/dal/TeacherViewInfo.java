@@ -35,13 +35,20 @@ public class TeacherViewInfo {
     }
 
     private void createStudents() {
-        Student s1 = new Student("Betina Jensen", "BeJe6589", "images/img1.png");
-        Student s2 = new Student("Mette Poulsen", "MePo8752", "images/img2.png");
-        Student s3 = new Student("Theo Kristiansen", "ThKr1802", "images/img3.jpg");
-        Student s4 = new Student("Victor Rasmussen", "ViRa1209", "images/img4.jpg");
-        Student s5 = new Student("Louisa Eriksen", "LoEr3265", "images/img5.jpg");
-        Student s6 = new Student("Tim Hansen", "TiHa7642", "images/img6.jpg");
-        Student s7 = new Student("Kasper Larsen", "KaLa3012", "images/img7.jpg");
+        Student s1 = new Student("Betina Jensen", "BeJe6589", "images/img1.png", "8");
+        s1.absencePerDay = new int[]{1, 8, 4, 2, 0};
+        Student s2 = new Student("Mette Poulsen", "MePo8752", "images/img2.png", "13");
+        s2.absencePerDay = new int[]{7, 0, 0, 15, 20};
+        Student s3 = new Student("Theo Kristiansen", "ThKr1802", "images/img3.jpg", "7");
+        s3.absencePerDay = new int[]{0, 10, 5, 8, 0};
+        Student s4 = new Student("Victor Rasmussen", "ViRa1209", "images/img4.jpg", "0");
+        s4.absencePerDay = new int[]{0, 0, 0, 0, 0};
+        Student s5 = new Student("Louisa Eriksen", "LoEr3265", "images/img5.jpg", "9");
+        s5.absencePerDay = new int[]{9, 5, 10, 6, 17};
+        Student s6 = new Student("Tim Hansen", "TiHa7642", "images/img6.jpg", "23");
+        s6.absencePerDay = new int[]{25, 30, 17, 5, 20};
+        Student s7 = new Student("Kasper Larsen", "KaLa3012", "images/img7.jpg", "18");
+        s7.absencePerDay = new int[]{15, 0, 2, 0, 74};
 
         scoStudents.addAll(Arrays.asList(s1, s5, s2, s6, s4));
         sdeStudents.addAll(Arrays.asList(s7, s5, s2, s3, s4));

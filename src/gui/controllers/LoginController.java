@@ -17,20 +17,20 @@ public class LoginController {
     @FXML
     private  PasswordField txtPassword;
 
-    private static final String TEACHER_ID = "t";
+    private static final String TEACHER_ID = "Teacher";
     private static final String TEACHER_PASS = "TeacherPassword";
-    private static final String STUDENT_ID = "s";
+    private static final String STUDENT_ID = "Student";
     private static final String STUDENT_PASS = "StudentPassword";
 
     public void handleLogin(ActionEvent actionEvent) throws IOException {
         Stage primaryStage = (Stage) txtID.getScene().getWindow();
 
         // TODO: when done - change logins
-        if (txtID.getText().equals(TEACHER_ID) /*&& txtPassword.getText().equals(TEACHER_PASS)*/){
+        if (txtID.getText().equals(TEACHER_ID) && txtPassword.getText().equals(TEACHER_PASS)){
             primaryStage.setScene(new Scene(FXMLLoader.load(MainApp.class.getResource("views/TeacherStartView.fxml"))));
         }
-        else if (txtID.getText().equals(STUDENT_ID) /*&& txtPassword.getText().equals(STUDENT_PASS)*/){
-            primaryStage.setScene(new Scene(FXMLLoader.load(MainApp.class.getResource("views/StudentView.fxml"))));
+        else if (txtID.getText().equals(STUDENT_ID) && txtPassword.getText().equals(STUDENT_PASS)){
+            primaryStage.setScene(new Scene(FXMLLoader.load(MainApp.class.getResource("views/RegistrationView.fxml"))));
         }
         primaryStage.centerOnScreen();
     }

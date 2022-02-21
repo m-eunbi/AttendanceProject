@@ -11,7 +11,7 @@ public class StudentViewInfo {
 
     public StudentViewInfo(){
         lessons = new ArrayList<>();
-        student = new Student("Tim Hansen", "TiHa7642", "images/img6.jpg");
+        student = new Student("Tim Hansen", "TiHa7642", "images/img6.jpg", "23");
         fillLessons(lessons);
     }
 

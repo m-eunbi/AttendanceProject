@@ -65,8 +65,8 @@ public class StudentController implements Initializable {
 
     private void drawPieChart(){
         ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
-                new PieChart.Data("Absent", 3),
-                new PieChart.Data("Present", 47));
+                new PieChart.Data("Absent", 23),
+                new PieChart.Data("Present", 77));
         pieChart.setData(pieChartData);
         pieChart.setLabelsVisible(false);
         pieChart.setStartAngle(90);

@@ -5,13 +5,13 @@ Label {
 
 BorderPane {
     -fx-border-color: black;
-    -fx-background-image: url('https://i.imgur.com/yEFURzF.jpg');
+    -fx-background-image: url('https://i.imgur.com/GlLLapn.jpg');
     -fx-background-position: CENTER CENTER;
 }
 
 Button {
     -fx-background-color: white;
-    -fx-background-radius: 15;
+    -fx-background-radius: 5;
     -fx-border-color: black;
     -fx-border-radius: 5;
     -fx-font-family: fantasy;
@@ -30,6 +30,18 @@ ComboBox {
     -fx-font-weight: bold;
 }
 
+.box {
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+
+.confirm {
+    -fx-background-color: #6bc96e;
+}
+
+.decline {
+    -fx-background-color: #c43f3f;
+}
 
 
 
