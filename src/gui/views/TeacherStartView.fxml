@@ -25,7 +25,7 @@
                   <Insets bottom="50.0" />
                </VBox.margin>
             </ComboBox>
-            <HBox alignment="TOP_CENTER" prefWidth="200.0">
+            <HBox styleClass="boldText" alignment="TOP_CENTER" prefWidth="200.0">
                <children>
                   <Label prefWidth="150.0" text="Date" />
                   <Label prefWidth="150.0" text="Time" />
@@ -36,7 +36,8 @@
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="600.0" text="Select course to see lessons" />
                </children></VBox>
-            <Button onAction="#studentOverview" mnemonicParsing="false" prefHeight="40.0" text="Student Overview">
+            <Label text="Click lesson to see details" />
+            <Button mnemonicParsing="false" onAction="#studentOverview" prefHeight="40.0" text="Student Overview">
                <VBox.margin>
                   <Insets top="50.0" />
                </VBox.margin></Button>
