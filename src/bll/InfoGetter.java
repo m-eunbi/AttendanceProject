@@ -13,34 +13,34 @@ public class InfoGetter {
     private TeacherViewInfo teacherViewInfo = new TeacherViewInfo();
 
     public ArrayList<Lesson> studentLessons(){
-        return studentViewInfo.lessons;
+        return studentViewInfo.getLessons();
     }
 
     public Student studentViewInfo(){
-        return studentViewInfo.student;
+        return studentViewInfo.getStudent();
     }
 
     public ArrayList<Lesson> getCourseLessons(String course) {
         if (course.equals("SCO"))
-            return teacherViewInfo.scoLessons;
+            return teacherViewInfo.getScoLessons();
         else if (course.equals("SDE"))
-            return teacherViewInfo.sdeLessons;
+            return teacherViewInfo.getSdeLessons();
         return new ArrayList<>();
     }
 
     public ArrayList<Student> getCourseStudents(String course) {
         if (course.equals("SCO"))
-            return teacherViewInfo.scoStudents;
+            return teacherViewInfo.getScoStudents();
         else if (course.equals("SDE"))
-            return teacherViewInfo.sdeStudents;
+            return teacherViewInfo.getSdeStudents();
         return new ArrayList<>();
     }
 
     public Course getCourse(String course){
         if (course.equals("SCO"))
-            return teacherViewInfo.sco;
+            return teacherViewInfo.getSco();
         else if (course.equals("SDE"))
-            return teacherViewInfo.sde;
+            return teacherViewInfo.getSde();
         return null;
     }
 

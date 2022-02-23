@@ -23,7 +23,4 @@ public class MainApp extends Application {
         primaryStage.show();
     }
 
-    public static void setStudentScene(Stage stage) throws IOException {
-
-    }
 }

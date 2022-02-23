@@ -5,6 +5,7 @@ import dal.BE.Lesson;
 import gui.MainApp;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -20,11 +21,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class TeacherController {
-    public ComboBox comboBox;
-    public Label lblDate;
-    public Label lblCourse;
-    public Button btnLogout;
-    public VBox lessonsVbox;
+    @FXML
+    private ComboBox<String> comboBox;
+    @FXML
+    private Button btnLogout;
+    @FXML
+    private VBox lessonsVbox;
 
     private InfoGetter infoGetter;
 
@@ -45,7 +47,7 @@ public class TeacherController {
             fxmlLoader.setLocation(MainApp.class.getResource("views/StudentOverview.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             OverviewController overviewController = fxmlLoader.getController();
-            overviewController.setCourseInfo(infoGetter.getCourse((String) comboBox.getValue()));
+            overviewController.setCourseInfo(infoGetter.getCourse(comboBox.getValue()));
             primaryStage.setScene(scene);
             primaryStage.centerOnScreen();
         }
@@ -54,7 +56,7 @@ public class TeacherController {
     public void fillLessons() {
         lessonsVbox.getChildren().clear();
         lessonsVbox.setStyle("-fx-border-color: transparent");
-        ArrayList<Lesson> lessons = infoGetter.getCourseLessons((String) comboBox.getValue());
+        ArrayList<Lesson> lessons = infoGetter.getCourseLessons(comboBox.getValue());
         for (Lesson l : lessons) {
             HBox hBox = new HBox();
             hBox.setMinHeight(30);
@@ -77,11 +79,11 @@ public class TeacherController {
                     }
                 }
             });
-            Label date = new Label(l.date);
+            Label date = new Label(l.getDate());
             date.setMinWidth(150);
-            Label time = new Label(l.time);
+            Label time = new Label(l.getTime());
             time.setMinWidth(150);
-            Label attendance = new Label(l.presentStudents.size() + "/" + l.allStudents.size());
+            Label attendance = new Label(l.getPresentStudents().size() + "/" + l.getAllStudents().size());
             attendance.setMinWidth(30);
             hBox.getChildren().addAll(date, time, attendance);
             lessonsVbox.getChildren().add(hBox);

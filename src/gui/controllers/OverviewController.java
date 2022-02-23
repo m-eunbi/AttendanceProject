@@ -5,6 +5,7 @@ import dal.BE.Student;
 import gui.MainApp;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -22,23 +23,27 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class OverviewController {
-    public TilePane tilePane;
-    public ComboBox comboBox;
-    public BorderPane borderPane;
-    public VBox infoVBox;
+    @FXML
+    private TilePane tilePane;
+    @FXML
+    private ComboBox<String> comboBox;
+    @FXML
+    private BorderPane borderPane;
+    @FXML
+    private VBox infoVBox;
 
     private Course course;
 
     public void setCourseInfo(Course course){
         this.course = course;
-        setStudents(course.studentsAlphabetical);
+        setStudents(course.getStudentsAlphabetical());
     }
 
     public void selectOrder(ActionEvent actionEvent) {
         if (comboBox.getValue().toString().equals("Alphabetical"))
-            setStudents(course.studentsAlphabetical);
+            setStudents(course.getStudentsAlphabetical());
         else if (comboBox.getValue().toString().equals("Most absence"))
-            setStudents(course.studentsAbsence);
+            setStudents(course.getStudentsAbsence());
     }
 
     public void setStudents(ArrayList<Student> students){
@@ -51,19 +56,19 @@ public class OverviewController {
                 @Override
                 public void handle(MouseEvent event) {
                     infoVBox.getChildren().clear();
-                    Label infoName = new Label(s.name);
-                    Label id = new Label(s.iD);
-                    Label email = new Label(s.email);
-                    Label absence = new Label("Total absence: " + s.absencePercent + "%");
-                    BarChart<String, Number> chart = drawChart(s.absencePerDay);
+                    Label infoName = new Label(s.getName());
+                    Label id = new Label(s.getiD());
+                    Label email = new Label(s.getEmail());
+                    Label absence = new Label("Total absence: " + s.getAbsencePercent() + "%");
+                    BarChart<String, Number> chart = drawChart(s.getAbsencePerDay());
                     infoVBox.getChildren().addAll(infoName, id, email, absence, chart);
                     infoVBox.setStyle("-fx-background-color: white; -fx-border-color: black");
                 }
             });
-            ImageView pic = new ImageView(s.imagePath);
+            ImageView pic = new ImageView(s.getImagePath());
             pic.setFitHeight(150);
             pic.setFitWidth(150);
-            Label name = new Label(s.name);
+            Label name = new Label(s.getName());
             name.setPadding(new Insets(0, 0, 5, 5));
             vBox.getChildren().addAll(pic, name);
             tilePane.getChildren().add(vBox);

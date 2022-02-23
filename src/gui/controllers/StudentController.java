@@ -8,6 +8,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
@@ -15,7 +16,6 @@ import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -27,9 +27,12 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class StudentController implements Initializable {
-    public PieChart pieChart;
-    public VBox lessonVBox;
-    public VBox infoVBox;
+    @FXML
+    private PieChart pieChart;
+    @FXML
+    private VBox lessonVBox;
+    @FXML
+    private VBox infoVBox;
 
     private InfoGetter infoGetter;
 
@@ -55,11 +58,11 @@ public class StudentController implements Initializable {
 
     private void setStudentInfo(){
         Student student = infoGetter.studentViewInfo();
-        ImageView image = new ImageView(student.imagePath);
+        ImageView image = new ImageView(student.getImagePath());
         image.setFitHeight(50);
         image.setFitWidth(50);
-        Label name = new Label(student.name);
-        Label iD = new Label("ID: " + student.iD);
+        Label name = new Label(student.getName());
+        Label iD = new Label("ID: " + student.getiD());
         infoVBox.getChildren().addAll(image, name, iD);
     }
 
@@ -75,7 +78,7 @@ public class StudentController implements Initializable {
     private void fillLessons(){
         for (Lesson l : lessons) {
             String present = "";
-            if (l.present)
+            if (l.isPresent())
                 present = "✅";
             else
                 present = "❌";
@@ -83,9 +86,9 @@ public class StudentController implements Initializable {
             innerHBox.setStyle("-fx-border-color: black; -fx-alignment: CENTER; -fx-background-color: white");
             innerHBox.setPadding(new Insets(0, 10, 0,10));
             HBox outerHBox = new HBox();
-            Label date = new Label(l.date);
+            Label date = new Label(l.getDate());
             date.setMinWidth(150);
-            Label lesson = new Label(l.course);
+            Label lesson = new Label(l.getCourse());
             lesson.setMinWidth(100);
             Label presence = new Label(present);
             presence.setMinWidth(10);
@@ -93,13 +96,13 @@ public class StudentController implements Initializable {
             btn.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    if(l.present){
+                    if(l.isPresent()){
                         presence.setText("❌");
-                        l.present = false;
+                        l.setPresent(false);
                     }
                     else{
                         presence.setText("✅");
-                        l.present = true;
+                        l.setPresent(true);
                     }
                 }
             });
