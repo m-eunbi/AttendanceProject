@@ -18,9 +18,9 @@
       </AnchorPane>
    </top>
    <center>
-      <VBox fx:id="vBox" maxWidth="500.0" prefWidth="498.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox fx:id="vBox" maxWidth="500.0" prefWidth="498.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox styleClass="boldText" alignment="TOP_CENTER" spacing="50.0">
+            <HBox alignment="TOP_CENTER" spacing="50.0" styleClass="boldText">
                <children>
                   <Label fx:id="lblDate" text="Date" />
                   <Label fx:id="lblCourse" text="Course" />
@@ -28,8 +28,8 @@
             </HBox>
             <HBox alignment="TOP_CENTER">
                <children>
-                  <Label prefWidth="350.0" text="Student" />
-                  <Label text="Presence" />
+                  <Label prefWidth="380.0" text="Student" />
+                  <Label prefWidth="75.0" text="Attendance" />
                </children>
             </HBox>
          </children>
